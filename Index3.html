@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="project3.css">
+    <link rel="icon" type="image/jpg" href="smile.png">
+</head>
+
+<body>
+
+<h1>Welcome to your Personal Dashboard!</h1>
+
+<div class="dashboard">
+
+    <div class="card" id="profileCard">
+        <h2>Profile Card</h2>
+        <p><strong>Name:</strong> <span id="displayName">—</span></p>
+        <p><strong>Email:</strong> <span id="displayEmail">—</span></p>
+        <p><strong>Favorite Color:</strong>
+            <span id="displayColor">—</span>
+        </p>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <h2>User Information</h2>
+
+        <form id="userForm">
+            <label>
+                Name:
+                <input type="text" id="nameInput" required>
+            </label>
+
+            <label>
+                Email:
+                <input type="email" id="emailInput" required>
+            </label>
+
+            <span class="tooltip">
+                ℹ
+                <span class="tooltiptext">
+                    Your favorite color updates the profile card background!
+                </span>
+            </span>
+
+            <label>
+                Favorite Color:
+                <input type="color" id="colorInput">
+            </label>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+
+    <button id="sortBtn">Sort Profiles by Name</button>
+
+</div>
+
+<div class="card" id="apiSection">
+    <h2>Fetched Users (API Data)</h2>
+
+    <button id="loadUsersBtn">View All Users</button>
+    <button id="reloadUsersBtn">Reload</button>
+    <button id="clearUsersBtn">Clear</button>
+
+    <p id="apiMessage"></p>
+
+    <div id="usersContainer" class="users-grid"></div>
+</div>
+
+<script src="dashboard_project3.js"></script>
+
+</body>
+</html>
